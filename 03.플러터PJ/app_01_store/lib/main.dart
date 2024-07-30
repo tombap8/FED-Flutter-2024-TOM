@@ -107,10 +107,31 @@ class StorePage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 20.0,
                   ),
-                  ),                  
+                  ),
                 ],
               ),
-              )
+              ),
+              // 하단 이미지 추가하기
+              // Expanded 위젯 - flex속성이 있어서 등분할 함!
+              Expanded(
+                child: Image.asset(
+                  "bag.jpeg", // 이미지경로명
+                  fit: BoxFit.cover, // 이미지박스채움
+                ),
+                
+              ),
+              // 이미지 사이간격은 빈박스로 조정함
+              // 가로간격은 width속성, 세로간격은 height속성사용!
+              SizedBox(
+                height: 5.0,
+              ),
+              Expanded(
+                child: Image.asset(
+                  "cloth.jpeg", // 이미지경로명
+                  fit: BoxFit.cover, // 이미지박스채움
+                ),
+                
+              ),
           ],
         ),
       ),
