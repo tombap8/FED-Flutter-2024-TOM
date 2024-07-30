@@ -71,6 +71,7 @@ class StorePage extends StatelessWidget {
                     fontSize: 20.0,
                   ),
                   ),
+                  Spacer(), // 사이간격 일정하게 해줌
                   Text(
                     "Kids",
                     // style 속성에 글자속성은 TextStyle()
@@ -79,6 +80,34 @@ class StorePage extends StatelessWidget {
                     fontSize: 20.0,
                   ),
                   ),
+                  Spacer(), // 사이간격 일정하게 
+                  // 로고 이미지 추가! 이미지 위젯사용!
+                  // pubspec.yaml 환경설정파일에
+                  // assets속성에 별도의 경로 셋팅이 없으면 
+                  // 기본적으로 root아래 assets폴더의
+                  // 이미지를 가져옴!
+                  Image.asset(
+                    'logo.png',// 이미지명
+                    width: 70.0,// 이미지 가로크기
+                  ),                  
+                  Spacer(), // 사이간격 일정하게 해줌
+                  Text(
+                    "Shoes",
+                    // style 속성에 글자속성은 TextStyle()
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0,
+                  ),
+                  ),
+                  Spacer(), // 사이간격 일정하게 해줌
+                  Text(
+                    "Bag",
+                    // style 속성에 글자속성은 TextStyle()
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0,
+                  ),
+                  ),                  
                 ],
               ),
               )
