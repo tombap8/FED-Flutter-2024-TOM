@@ -8,15 +8,10 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
-  // @override는 기존 클래스를 재정의 함을 표시!
-  // 오버라이드는 재정의, 오버로드는 동명의 메서드 다중정의
   @override
-  // 최상위위젯 : 전체 틀을 잡아줌
   Widget build(BuildContext context) {
     return MaterialApp(
-      // 
-      debugShowCheckedModeBanner: false,
-      title: '나야나~!!!!',
+      title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -36,7 +31,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: '나는 이제 부터 플러터 개발자입니다~!'),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -62,7 +57,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
-  void _incrementCounter() {``
+  void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
