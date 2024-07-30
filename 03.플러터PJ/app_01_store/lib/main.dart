@@ -48,7 +48,7 @@ class StorePage extends StatelessWidget {
         // body의 구성요소는 child속성으로 표현!
         child: Column(
           // children 속성은 컬럼하위요소들임!
-           /*
+          /*
             [ Padding 위젯 ]
               padding: EdgeInsets.all(4방향전체),
               padding: EdgeInsets.only(left/top/right/bottom특정방향만),
@@ -66,79 +66,73 @@ class StorePage extends StatelessWidget {
                   Text(
                     "Woman",
                     // style 속성에 글자속성은 TextStyle()
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20.0,
-                  ),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                    ),
                   ),
                   Spacer(), // 사이간격 일정하게 해줌
                   Text(
                     "Kids",
                     // style 속성에 글자속성은 TextStyle()
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20.0,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                    ),
                   ),
-                  ),
-                  Spacer(), // 사이간격 일정하게 
+                  Spacer(), // 사이간격 일정하게
                   // 로고 이미지 추가! 이미지 위젯사용!
                   // pubspec.yaml 환경설정파일에
-                  // assets속성에 별도의 경로 셋팅이 없으면 
+                  // assets속성에 별도의 경로 셋팅이 없으면
                   // 기본적으로 root아래 assets폴더의
                   // 이미지를 가져옴!
                   Image.asset(
-                    'logo.png',// 이미지명
-                    width: 70.0,// 이미지 가로크기
-                  ),                  
+                    'logo.png', // 이미지명
+                    width: 70.0, // 이미지 가로크기
+                  ),
                   Spacer(), // 사이간격 일정하게 해줌
                   Text(
                     "Shoes",
                     // style 속성에 글자속성은 TextStyle()
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20.0,
-                  ),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                    ),
                   ),
                   Spacer(), // 사이간격 일정하게 해줌
                   Text(
                     "Bag",
                     // style 속성에 글자속성은 TextStyle()
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20.0,
-                  ),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                    ),
                   ),
                 ],
               ),
+            ),
+            // 하단 이미지 추가하기
+            // Expanded 위젯 - flex속성이 있어서 등분할 함!
+            Expanded(
+              child: Image.asset(
+                "bag.jpeg", // 이미지경로명
+                fit: BoxFit.cover, // 이미지박스채움
               ),
-              // 하단 이미지 추가하기
-              // Expanded 위젯 - flex속성이 있어서 등분할 함!
-              Expanded(
-                child: Image.asset(
-                  "bag.jpeg", // 이미지경로명
-                  fit: BoxFit.cover, // 이미지박스채움
-                ),
-                
+            ),
+            // 이미지 사이간격은 빈박스로 조정함
+            // 가로간격은 width속성, 세로간격은 height속성사용!
+            SizedBox(
+              height: 5.0,
+            ),
+            Expanded(
+              child: Image.asset(
+                "cloth.jpeg", // 이미지경로명
+                fit: BoxFit.cover, // 이미지박스채움
               ),
-              // 이미지 사이간격은 빈박스로 조정함
-              // 가로간격은 width속성, 세로간격은 height속성사용!
-              SizedBox(
-                height: 5.0,
-              ),
-              Expanded(
-                child: Image.asset(
-                  "cloth.jpeg", // 이미지경로명
-                  fit: BoxFit.cover, // 이미지박스채움
-                ),
-                
-              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-
-
-
